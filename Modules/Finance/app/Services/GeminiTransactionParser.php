@@ -5,10 +5,11 @@ namespace Modules\Finance\Services;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Modules\Finance\Contracts\TransactionParserInterface;
 use Modules\Finance\Models\Account;
 use Modules\Finance\Models\Category;
 
-class GeminiTransactionParser
+class GeminiTransactionParser implements TransactionParserInterface
 {
     protected string $apiKey;
 
